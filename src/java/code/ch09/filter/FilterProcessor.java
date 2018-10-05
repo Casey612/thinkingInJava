@@ -1,6 +1,6 @@
 package code.ch09.filter;
 
-import thinkingInJava.ch09.processor2.Apply2;
+import  code.ch09.processor2.Apply2;
 
 /**
  * @author yuzhe
