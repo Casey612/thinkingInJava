@@ -55,11 +55,6 @@ public class DirList {
     }
 
     public static FilenameFilter getContentFilter(String content) {
-        return new FilenameFilter() {
-            @Override
-            public boolean accept(File dir, String name) {
-                return name.contains(content);
-            }
-        };
+        return (dir, name) -> name.contains(content);
     }
 }
