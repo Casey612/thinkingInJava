@@ -1,7 +1,7 @@
 package code.ch12.logback;
 
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 /**
  * @author yuzhe
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
  */
 public class LoggingTest {
 
-    static final Logger LOG = LoggerFactory.getLogger(LoggingTest.class);
+    static final org.slf4j.Logger LOG = LoggerFactory.getLogger(LoggingTest.class);
 
     /**
      * @param args
