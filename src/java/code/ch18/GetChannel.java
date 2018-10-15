@@ -29,8 +29,10 @@ public class GetChannel {
         ByteBuffer buff = ByteBuffer.allocate(SIZE);
         fc.read(buff);
         buff.flip();
-        while(buff.hasRemaining()){
-            System.out.print((char)buff.get());
+        while (buff.hasRemaining()) {
+            byte b = buff.get();
+            System.out.print(b);
+            System.out.print((char) b);
         }
     }
 
