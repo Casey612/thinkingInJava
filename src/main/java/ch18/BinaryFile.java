@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 
 import java.io.BufferedInputStream;
@@ -33,7 +33,7 @@ public class BinaryFile {
     }
 
     public static void main(String[] args) {
-        String path = "target/classes/java/ch18/TextFile.class";
+        String path = "target/classes/ch18/TextFile.class";
         try {
             byte[] data = read(path);
             byte[] magic = new byte[4];

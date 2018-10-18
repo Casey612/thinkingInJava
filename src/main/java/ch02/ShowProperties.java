@@ -1,4 +1,4 @@
-package java.ch02;
+package ch02;
 
 /**
  * @author yuzhe

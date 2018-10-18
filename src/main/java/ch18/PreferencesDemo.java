@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;

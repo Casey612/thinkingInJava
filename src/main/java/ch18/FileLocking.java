@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class FileLocking {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        FileOutputStream fos = new FileOutputStream("src/resources/file.txt");
+        FileOutputStream fos = new FileOutputStream("src/main/resources/file.txt");
         FileLock fl = fos.getChannel().tryLock();
         if(fl != null){
             System.out.println("lock file");

@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 
@@ -11,7 +11,7 @@ public class StoringAndRecoveringData {
     public static void main(String[] args) throws IOException {
         DataOutputStream out = new DataOutputStream(
                 new BufferedOutputStream(
-                        new FileOutputStream("src/resources/Data.txt")
+                        new FileOutputStream("src/main/resources/Data.txt")
                 )
         );
         out.writeDouble(3.141592d);
@@ -22,7 +22,7 @@ public class StoringAndRecoveringData {
 
         DataInputStream in = new DataInputStream(
                 new BufferedInputStream(
-                        new FileInputStream("src/resources/Data.txt")
+                        new FileInputStream("src/main/resources/Data.txt")
                 )
         );
 

@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 import java.util.Enumeration;
@@ -11,17 +11,17 @@ import java.util.zip.*;
 public class ZIPCompress {
 
     public static void main(String[] args) throws IOException {
-        FileOutputStream f = new FileOutputStream("src/resources/ch18/test.zip");
+        FileOutputStream f = new FileOutputStream("src/main/resources/ch18/test.zip");
         CheckedOutputStream csum = new CheckedOutputStream(f, new Adler32());
         ZipOutputStream zos = new ZipOutputStream(csum);
         BufferedOutputStream out = new BufferedOutputStream(zos);
         zos.setComment("a test of java zipping");
 
         String[] params = new String[]{
-                "src/resources/ch18/data.txt",
-                "src/resources/ch18/data2.txt",
-                "src/resources/ch18/data3.txt",
-                "src/resources/ch18/data4.txt",
+                "src/main/resources/ch18/data.txt",
+                "src/main/resources/ch18/data2.txt",
+                "src/main/resources/ch18/data3.txt",
+                "src/main/resources/ch18/data4.txt",
         };
         for (String param : params) {
             System.out.println("writing file " + param);
@@ -40,7 +40,7 @@ public class ZIPCompress {
         System.out.println("checksum: " + csum.getChecksum().getValue());
         System.out.println("-----------------------------------------------");
         System.out.println("reading file");
-        FileInputStream fin = new FileInputStream("src/resources/ch18/test.zip");
+        FileInputStream fin = new FileInputStream("src/main/resources/ch18/test.zip");
         CheckedInputStream csumi = new CheckedInputStream(fin, new Adler32());
         ZipInputStream in2 = new ZipInputStream(csumi);
         BufferedInputStream bin = new BufferedInputStream(in2);
@@ -55,7 +55,7 @@ public class ZIPCompress {
         bin.close();
         in2.close();
         System.out.println("----------------------------------------------------");
-        ZipFile zf = new ZipFile("src/resources/ch18/test.zip");
+        ZipFile zf = new ZipFile("src/main/resources/ch18/test.zip");
         Enumeration<? extends ZipEntry> e = zf.entries();
         while(e.hasMoreElements()){
             ZipEntry ze2 = e.nextElement();

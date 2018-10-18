@@ -1,7 +1,7 @@
-package java.ch14;
+package ch14;
 
-import java.ch14.example1.FancyToy;
-import java.ch14.example1.Toy;
+import ch14.example1.FancyToy;
+import ch14.example1.Toy;
 
 /**
  * @author yuzhe

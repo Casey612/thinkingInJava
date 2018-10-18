@@ -1,4 +1,4 @@
-package java.ch13;
+package ch13;
 
 import java.util.Arrays;
 import java.util.regex.Pattern;

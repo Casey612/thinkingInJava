@@ -1,4 +1,4 @@
-package java.ch16;
+package ch16;
 
 /**
  * @author yuzhe

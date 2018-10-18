@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -15,8 +15,8 @@ public class ChannelCopy {
     private static final int SIZE = 1024;
 
     public static void main(String[] args) throws IOException {
-        String input = "src/resources/ch18/CopyTarget";
-        String output = "src/resources/ch18/CopyFile";
+        String input = "src/main/resources/ch18/CopyTarget";
+        String output = "src/main/resources/ch18/CopyFile";
 
         FileChannel
                 in = new FileInputStream(input).getChannel(),

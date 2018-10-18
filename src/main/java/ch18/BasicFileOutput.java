@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 
@@ -8,12 +8,12 @@ import java.io.*;
  */
 public class BasicFileOutput {
 
-    static String file = "src/resources/BasicFileOutput.out";
+    static String file = "src/main/resources/BasicFileOutput.out";
 
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(
                 new StringReader(
-                        BufferedInputFile.read("src/java/java/ch18/BasicFileOutput.java")
+                        BufferedInputFile.read("src/main/java/ch18/BasicFileOutput.java")
                 )
         );
         PrintWriter out = new PrintWriter(

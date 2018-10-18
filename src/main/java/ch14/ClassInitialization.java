@@ -1,4 +1,4 @@
-package java.ch14;
+package ch14;
 
 import java.util.Random;
 

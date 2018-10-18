@@ -1,4 +1,4 @@
-package java.ch12.logback;
+package ch12.logback;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

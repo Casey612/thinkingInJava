@@ -1,4 +1,4 @@
-package java.ch15;
+package ch15;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

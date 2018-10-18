@@ -1,8 +1,8 @@
-package java.ch17;
+package ch17;
 
-import java.ch15.Generator;
-import java.ch16.CountingGenerator;
-import java.ch16.RandomGenerator;
+import ch15.Generator;
+import ch16.CountingGenerator;
+import ch16.RandomGenerator;
 
 import java.util.Iterator;
 

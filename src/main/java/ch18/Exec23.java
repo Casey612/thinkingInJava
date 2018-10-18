@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import org.apache.commons.compress.utils.CharsetNames;
 
@@ -17,11 +17,11 @@ import java.nio.charset.Charset;
 public class Exec23 {
 
     public static void main(String[] args) throws IOException {
-        FileChannel fc = new FileOutputStream("src/resources/ch18/data3.txt").getChannel();
+        FileChannel fc = new FileOutputStream("src/main/resources/ch18/data3.txt").getChannel();
         fc.write(ByteBuffer.wrap("hello, world".getBytes(CharsetNames.UTF_8)));
         fc.close();
 
-        fc = new FileInputStream("src/resources/ch18/data3.txt").getChannel();
+        fc = new FileInputStream("src/main/resources/ch18/data3.txt").getChannel();
         ByteBuffer bf = ByteBuffer.allocate(64);
         bf.clear();
         fc.read(bf);
@@ -34,12 +34,12 @@ public class Exec23 {
         System.out.println();
         System.out.println("-----------------------------------------------");
 
-        fc = new FileOutputStream("src/resources/ch18/data4.txt").getChannel();
+        fc = new FileOutputStream("src/main/resources/ch18/data4.txt").getChannel();
         //UTF_16, UTF_16BE, UTF_16LE
         fc.write(ByteBuffer.wrap("hello, world".getBytes(CharsetNames.UTF_16)));
         fc.close();
 
-        fc = new FileInputStream("src/resources/ch18/data4.txt").getChannel();
+        fc = new FileInputStream("src/main/resources/ch18/data4.txt").getChannel();
         bf = ByteBuffer.allocate(64);
         bf.clear();
         fc.read(bf);

@@ -1,4 +1,4 @@
-package java.ch11;
+package ch11;
 
 import org.junit.Assert;
 

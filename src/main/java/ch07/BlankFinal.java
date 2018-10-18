@@ -1,4 +1,4 @@
-package java.ch07;
+package ch07;
 
 /**
  * @author: yuki

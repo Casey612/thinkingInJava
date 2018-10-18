@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,16 +16,16 @@ public class GetChannel {
     private static final int SIZE = 1024;
 
     public static void main(String[] args) throws IOException {
-        FileChannel fc = new FileOutputStream("src/resources/ch18/data.txt").getChannel();
+        FileChannel fc = new FileOutputStream("src/main/resources/ch18/data.txt").getChannel();
         fc.write(ByteBuffer.wrap("some text\n".getBytes()));
         fc.close();
 
-        fc = new RandomAccessFile("src/resources/ch18/data.txt", "rw").getChannel();
+        fc = new RandomAccessFile("src/main/resources/ch18/data.txt", "rw").getChannel();
         fc.position(fc.size());
         fc.write(ByteBuffer.wrap("some more".getBytes()));
         fc.close();
 
-        fc = new FileInputStream("src/resources/ch18/data.txt").getChannel();
+        fc = new FileInputStream("src/main/resources/ch18/data.txt").getChannel();
         ByteBuffer buff = ByteBuffer.allocate(SIZE);
         fc.read(buff);
         buff.flip();

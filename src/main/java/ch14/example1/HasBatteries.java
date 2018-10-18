@@ -1,4 +1,4 @@
-package java.ch14.example1;
+package ch14.example1;
 
 /**
  * @author yuzhe

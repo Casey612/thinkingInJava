@@ -1,6 +1,6 @@
-package java.ch16;
+package ch16;
 
-import java.ch15.Generator;
+import ch15.Generator;
 
 import java.util.Random;
 

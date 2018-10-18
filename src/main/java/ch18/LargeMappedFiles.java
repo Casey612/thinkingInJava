@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -15,7 +15,7 @@ public class LargeMappedFiles {
     static int length = 0x8FFFFFF;
 
     public static void main(String[] args) throws IOException {
-        MappedByteBuffer out = new RandomAccessFile("src/resources/ch18/test.dat", "rw")
+        MappedByteBuffer out = new RandomAccessFile("src/main/resources/ch18/test.dat", "rw")
                 .getChannel().map(FileChannel.MapMode.READ_WRITE, 0, length);
 
         for (int i = 0; i < length; i++) {

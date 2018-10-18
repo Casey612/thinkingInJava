@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 
@@ -8,7 +8,7 @@ import java.io.*;
  */
 public class Exec14 {
 
-    static String file = "src/resources/Exec14.out";
+    static String file = "src/main/resources/Exec14.out";
 
 
     /**
@@ -33,7 +33,7 @@ public class Exec14 {
 
     public static void bufferedWR() throws IOException {
         BufferedReader in = new BufferedReader(
-                new FileReader("src/java/java/ch18/Exec14.java")
+                new FileReader("src/main/java/ch18/Exec14.java")
         );
         PrintWriter out = new PrintWriter(
                 new BufferedWriter(new FileWriter(file))
@@ -50,7 +50,7 @@ public class Exec14 {
 
     public static void directWR() throws IOException {
         BufferedReader in = new BufferedReader(
-                new FileReader("src/java/java/ch18/Exec14.java")
+                new FileReader("src/main/java/ch18/Exec14.java")
         );
         PrintWriter out = new PrintWriter(
                 new FileWriter(file)

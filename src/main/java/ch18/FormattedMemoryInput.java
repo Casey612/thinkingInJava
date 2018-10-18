@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
@@ -13,7 +13,7 @@ public class FormattedMemoryInput {
         try {
             DataInputStream in = new DataInputStream(
                     new ByteArrayInputStream(
-                            BufferedInputFile.read("src/java/java/ch18/FormattedMemoryInput.java").getBytes()
+                            BufferedInputFile.read("src/main/java/ch18/FormattedMemoryInput.java").getBytes()
                     )
             );
             while (true) {

@@ -1,4 +1,4 @@
-package java.ch12;
+package ch12;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 import java.util.Random;
@@ -46,14 +46,14 @@ public class Worm implements Serializable{
         Worm w = new Worm(6, 'a');
         System.out.println("w = " + w);
         ObjectOutputStream out = new ObjectOutputStream(
-                new FileOutputStream("src/resources/worm.out")
+                new FileOutputStream("src/main/resources/worm.out")
         );
         out.writeObject("Worm Storage\n");
         out.writeObject(w);
         out.close();
 
         ObjectInputStream in = new ObjectInputStream(
-                new FileInputStream("src/resources/worm.out")
+                new FileInputStream("src/main/resources/worm.out")
         );
         String s = (String) in.readObject();
         Worm w2 = (Worm) in.readObject();

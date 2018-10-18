@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -17,7 +17,7 @@ public class LockingMappedFiles {
     private static FileChannel fc;
 
     public static void main(String[] args) throws IOException {
-        fc = new RandomAccessFile("src/resources/test.txt", "rw").getChannel();
+        fc = new RandomAccessFile("src/main/resources/test.txt", "rw").getChannel();
         MappedByteBuffer out = fc.map(FileChannel.MapMode.READ_WRITE, 0, LENGTH);
         for (int i = 0; i < LENGTH; i++) {
             out.put((byte) 'x');

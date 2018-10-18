@@ -1,4 +1,4 @@
-package java.ch17;
+package ch17;
 
 import java.util.Iterator;
 import java.util.TreeMap;

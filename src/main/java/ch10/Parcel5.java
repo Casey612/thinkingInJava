@@ -1,6 +1,6 @@
-package java.ch10;
+package ch10;
 
-import java.ch09.processor2.Processor;
+import ch09.processor2.Processor;
 
 /**
  * @author yuzhe

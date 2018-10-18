@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -11,7 +11,7 @@ import java.io.*;
 public class DirectTest {
 
     private static final int SIZE = 4000000;
-    private static final String PATH = "src/resources/ch18/DirectTestFile";
+    private static final String PATH = "src/main/resources/ch18/DirectTestFile";
 
     public static void main(String[] args) {
         Tester[] tests = new Tester[]{

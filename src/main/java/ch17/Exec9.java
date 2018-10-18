@@ -1,6 +1,6 @@
-package java.ch17;
+package ch17;
 
-import java.ch16.RandomGenerator;
+import ch16.RandomGenerator;
 
 import java.util.TreeSet;
 

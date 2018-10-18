@@ -1,4 +1,4 @@
-package java.ch09.filter;
+package ch09.filter;
 
 /**
  * @author yuzhe

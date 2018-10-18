@@ -1,7 +1,7 @@
-package java.ch17;
+package ch17;
 
 import lombok.Data;
-import java.ch15.Generator;
+import ch15.Generator;
 
 import java.util.LinkedHashMap;
 

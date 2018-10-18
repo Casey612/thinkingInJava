@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -9,7 +9,7 @@ import java.io.RandomAccessFile;
  */
 public class UsingRandomAccessFile {
 
-    static String file = "src/resources/rtest.dat";
+    static String file = "src/main/resources/rtest.dat";
 
     static void display() throws IOException {
         RandomAccessFile rf = new RandomAccessFile(file, "r");

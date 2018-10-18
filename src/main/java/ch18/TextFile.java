@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 import java.util.*;
@@ -68,12 +68,12 @@ public class TextFile extends ArrayList<String> {
 
 
     public static void main(String[] args) {
-        String file = read("src/java/java/ch18/TextFile.java");
-        write("src/resources/test.txt", file);
-        TextFile text = new TextFile("src/resources/test.txt");
-        text.write("src/resources/test2.txt");
+        String file = read("src/main/java/ch18/TextFile.java");
+        write("src/main/resources/test.txt", file);
+        TextFile text = new TextFile("src/main/resources/test.txt");
+        text.write("src/main/resources/test2.txt");
         TreeSet<String> words = new TreeSet<>(
-                new TextFile("src/java/java/ch18/TextFile.java", "\\W+")
+                new TextFile("src/main/java/ch18/TextFile.java", "\\W+")
         );
         System.out.println(words);
         //字符串字母序 区分大小写 数字和大写字母在“a” 之前

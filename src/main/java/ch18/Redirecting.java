@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 
@@ -11,11 +11,11 @@ public class Redirecting {
     public static void main(String[] args) throws IOException {
         PrintStream console = System.out;
         BufferedInputStream in = new BufferedInputStream(
-                new FileInputStream("src/java/java/ch18/Redirecting.java")
+                new FileInputStream("src/main/java/ch18/Redirecting.java")
         );
         PrintStream out = new PrintStream(
                 new BufferedOutputStream(
-                        new FileOutputStream("src/resources/ch18/test.out")
+                        new FileOutputStream("src/main/resources/ch18/test.out")
                 )
         );
         System.setIn(in);

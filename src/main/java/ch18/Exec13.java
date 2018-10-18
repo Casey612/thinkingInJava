@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 
@@ -8,12 +8,12 @@ import java.io.*;
  */
 public class Exec13 {
 
-    static String file = "src/resources/Exec13.out";
+    static String file = "src/main/resources/Exec13.out";
 
     public static void main(String[] args) throws IOException {
         LineNumberReader in = new LineNumberReader(
                 new StringReader(
-                        BufferedInputFile.read("src/java/java/ch18/Exec13.java")
+                        BufferedInputFile.read("src/main/java/ch18/Exec13.java")
                 )
         );
         PrintWriter out = new PrintWriter(

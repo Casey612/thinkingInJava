@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -22,7 +22,7 @@ public class BufferedInputFile {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println(read("src/java/java/ch18/BufferedInputFile.java"));
+        System.out.println(read("src/main/java/ch18/BufferedInputFile.java"));
     }
 
 }

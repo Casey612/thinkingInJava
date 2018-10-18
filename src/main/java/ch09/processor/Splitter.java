@@ -1,4 +1,4 @@
-package java.ch09.processor;
+package ch09.processor;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,12 +16,12 @@ public class BufferToText {
     private static final int SIZE = 1024;
 
     public static void main(String[] args) throws IOException {
-        FileChannel fc = new FileOutputStream("src/resources/ch18/data2.txt").getChannel();
+        FileChannel fc = new FileOutputStream("src/main/resources/ch18/data2.txt").getChannel();
         fc.write(ByteBuffer.wrap("some text".getBytes()));
         fc.close();
 
         //直接由ByteBuffer转charBudder GG
-        fc = new FileInputStream("src/resources/ch18/data2.txt").getChannel();
+        fc = new FileInputStream("src/main/resources/ch18/data2.txt").getChannel();
         ByteBuffer buff = ByteBuffer.allocate(SIZE);
         fc.read(buff);
         buff.flip();
@@ -37,11 +37,11 @@ public class BufferToText {
         System.out.println("----------------------------------------------------");
 
         //写入时编码，则写出时charBuffer可用
-        fc = new FileOutputStream("src/resources/ch18/data2.txt").getChannel();
+        fc = new FileOutputStream("src/main/resources/ch18/data2.txt").getChannel();
         fc.write(ByteBuffer.wrap("some text".getBytes("UTF-16BE")));
         fc.close();
 
-        fc = new FileInputStream("src/resources/ch18/data2.txt").getChannel();
+        fc = new FileInputStream("src/main/resources/ch18/data2.txt").getChannel();
         buff.clear();
         fc.read(buff);
         buff.flip();
@@ -50,13 +50,13 @@ public class BufferToText {
         System.out.println("----------------------------------------------------");
 
         //24个字节ByteBuffer转CharBuffer12个字节 多余字节无内容为空
-        fc = new FileOutputStream("src/resources/ch18/data2.txt").getChannel();
+        fc = new FileOutputStream("src/main/resources/ch18/data2.txt").getChannel();
         buff = ByteBuffer.allocate(24);
         buff.asCharBuffer().put("some text");
         fc.write(buff);
         fc.close();
 
-        fc = new FileInputStream("src/resources/ch18/data2.txt").getChannel();
+        fc = new FileInputStream("src/main/resources/ch18/data2.txt").getChannel();
         buff.clear();
         fc.read(buff);
         buff.flip();

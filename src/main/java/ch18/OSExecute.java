@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.BufferedReader;
 import java.io.IOException;

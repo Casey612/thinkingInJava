@@ -1,4 +1,4 @@
-package java.ch17;
+package ch17;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 import java.nio.IntBuffer;
@@ -12,7 +12,7 @@ public class MappedIO {
 
     private static int numOfInts = 4000000;
     private static int numOfUbuffInts = 200000;
-    private static String PATH = "src/resources/ch18/temp.tmp";
+    private static String PATH = "src/main/resources/ch18/temp.tmp";
 
 
     private static Tester[] tests = {

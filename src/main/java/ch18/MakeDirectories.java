@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 
@@ -20,7 +20,7 @@ public class MakeDirectories {
     }
 
     public static void main(String[] args) {
-        String path = "/home/yuzhe/IdeaProjects/thinkingInJava/src/resources/";
+        String path = "/home/yuzhe/IdeaProjects/thinkingInJava/src/main/resources/";
 
         File old = new File(path + "/ch18/text");
         File rname = new File(path + "/ch18/Text");

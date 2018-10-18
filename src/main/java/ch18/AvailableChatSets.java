@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.nio.charset.Charset;
 import java.util.Iterator;

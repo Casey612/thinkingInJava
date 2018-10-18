@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.*;
 import java.util.zip.GZIPInputStream;
@@ -12,11 +12,11 @@ public class GZIPCompress {
 
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(
-                new FileReader("src/resources/ch18/data.txt")
+                new FileReader("src/main/resources/ch18/data.txt")
         );
         BufferedOutputStream out = new BufferedOutputStream(
                 new GZIPOutputStream(
-                        new FileOutputStream("src/resources/ch18/data.txt.gz")
+                        new FileOutputStream("src/main/resources/ch18/data.txt.gz")
                 )
         );
         System.out.println("writing file");
@@ -30,7 +30,7 @@ public class GZIPCompress {
         System.out.println("reading file:");
         BufferedReader in2 = new BufferedReader(
                 new InputStreamReader(new GZIPInputStream(
-                        new FileInputStream("src/resources/ch18/data.txt.gz")
+                        new FileInputStream("src/main/resources/ch18/data.txt.gz")
                 ))
         );
         String s;

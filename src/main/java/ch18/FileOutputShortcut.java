@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,12 +11,12 @@ import java.io.StringReader;
  */
 public class FileOutputShortcut {
 
-    static String file = "src/resources/FileOutputShortcut.out";
+    static String file = "src/main/resources/FileOutputShortcut.out";
 
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(
                 new StringReader(
-                        BufferedInputFile.read("src/java/java/ch18/FileOutputShortcut.java")
+                        BufferedInputFile.read("src/main/java/ch18/FileOutputShortcut.java")
                 )
         );
         PrintWriter out = new PrintWriter(file);

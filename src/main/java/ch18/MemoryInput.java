@@ -1,4 +1,4 @@
-package java.ch18;
+package ch18;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -11,7 +11,7 @@ public class MemoryInput {
 
     public static void main(String[] args) throws IOException {
         StringReader in = new StringReader(
-                BufferedInputFile.read("src/java/java/ch18/MemoryInput.java")
+                BufferedInputFile.read("src/main/java/ch18/MemoryInput.java")
         );
         int c;
         while((c = in.read() ) != -1){
