@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+    <person>
+        <first>Dr a</first>
+        <last>b</last>
+    </person>
+    <person>
+        <first>c</first>
+        <last>d</last>
+    </person>
+    <person>
+        <first>e</first>
+        <last>f</last>
+    </person>
+    <person>
+        <first>g</first>
+        <last>h</last>
+    </person>
+</people>
