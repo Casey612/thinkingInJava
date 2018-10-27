@@ -13,6 +13,8 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <!--<compileSourceRoots>src/main/java/ch20</compileSourceRoots>-->
+                    <!--<compilerArgument>-proc:none</compilerArgument>-->
                 </configuration>
             </plugin>
         </plugins>
