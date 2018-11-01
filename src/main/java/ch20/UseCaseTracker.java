@@ -1,5 +1,7 @@
 package ch20;
 
+import ch20.unitTest.UseCase;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
