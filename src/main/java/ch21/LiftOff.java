@@ -16,7 +16,7 @@ public class LiftOff implements Runnable {
     }
 
     public String status(){
-        return "#" + id + "(" + (countDown > 0 ? countDown : "liftOff!") + ")," ;
+        return "#" + id + "(" + (countDown > 0 ? countDown : "liftOff!") + ")" ;
     }
 
     @Override

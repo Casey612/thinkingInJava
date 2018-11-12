@@ -1,7 +1,5 @@
 package ch17;
 
-import lombok.Getter;
-
 import java.util.Iterator;
 
 /**
@@ -15,10 +13,16 @@ public class SList<T> {
 
 
     private class Node<T> {
-        @Getter
         private T value;
-        @Getter
         private Node<T> next;
+
+        public T getValue() {
+            return value;
+        }
+
+        public Node<T> getNext() {
+            return next;
+        }
 
         public Node(T t) {
             this.value = t;
