@@ -14,7 +14,7 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
-                    <compileSourceRoots>src/main/java/ch20</compileSourceRoots>
+                    <!--<compileSourceRoots>src/main/java/ch20</compileSourceRoots>-->
                     <compilerArgument>-proc:none</compilerArgument>
                 </configuration>
             </plugin>
@@ -67,11 +67,6 @@
             <version>18.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.ant</groupId>
             <artifactId>ant</artifactId>

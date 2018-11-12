@@ -1,7 +1,5 @@
 package ch17;
 
-import lombok.AllArgsConstructor;
-
 import java.util.PriorityQueue;
 
 /**
@@ -10,9 +8,12 @@ import java.util.PriorityQueue;
  */
 public class Exec11 extends PriorityQueue<Exec11.Container> {
 
-    @AllArgsConstructor
     static class Container implements Comparable<Container> {
         private int i;
+
+        public Container(int i) {
+            this.i = i;
+        }
 
         @Override
         public int compareTo(Container o) {

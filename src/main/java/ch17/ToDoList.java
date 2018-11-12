@@ -1,7 +1,5 @@
 package ch17;
 
-import lombok.AllArgsConstructor;
-
 import java.util.PriorityQueue;
 
 /**
@@ -9,12 +7,17 @@ import java.util.PriorityQueue;
  * @date: 2018/10/6
  */
 public class ToDoList extends PriorityQueue<ToDoList.ToDoItem> {
-    @AllArgsConstructor
     public static class ToDoItem implements Comparable<ToDoItem> {
 
         private char primary;
         private int secondary;
         private String item;
+
+        public ToDoItem(char primary, int secondary, String item) {
+            this.primary = primary;
+            this.secondary = secondary;
+            this.item = item;
+        }
 
         @Override
         public int compareTo(ToDoItem o) {

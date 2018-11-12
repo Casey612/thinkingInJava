@@ -1,14 +1,12 @@
 package ch18;
 
-import lombok.AllArgsConstructor;
-
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * @author yuzhe
  * @since 10/9/18
  */
-@AllArgsConstructor
 public class ProcessFiles {
 
     public interface Strategy {
@@ -17,6 +15,11 @@ public class ProcessFiles {
 
     private Strategy strategy;
     private String ext;
+
+    public ProcessFiles(Strategy strategy, String ext) {
+        this.strategy = strategy;
+        this.ext = ext;
+    }
 
     public void start(String[] args) {
         if (args.length == 0) {

@@ -1,6 +1,5 @@
 package ch17;
 
-import lombok.Data;
 import ch15.Generator;
 
 import java.util.LinkedHashMap;
@@ -44,7 +43,6 @@ public class MapData<K, V> extends LinkedHashMap<K, V> {
 
 }
 
-@Data
 class Pair<K, V> {
     private final K key;
     private final V value;
@@ -52,5 +50,13 @@ class Pair<K, V> {
     Pair(K key, V value) {
         this.key = key;
         this.value = value;
+    }
+
+    public K getKey() {
+        return key;
+    }
+
+    public V getValue() {
+        return value;
     }
 }
