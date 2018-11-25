@@ -15,8 +15,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CriticalSection {
     static void testApproaches(PairManager pman1, PairManager pman2) {
         ExecutorService exec = Executors.newCachedThreadPool();
-        PairMunipulator pm1 = new PairMunipulator(pman1),
-                pm2 = new PairMunipulator(pman2);
+        PairManipulator pm1 = new PairManipulator(pman1),
+                pm2 = new PairManipulator(pman2);
         PairCheck pch1 = new PairCheck(pman1),
                 pch2 = new PairCheck(pman2);
         exec.execute(pm1);
@@ -28,7 +28,7 @@ public class CriticalSection {
         } catch (InterruptedException e) {
             System.out.println("sleep interrupted");
         }
-        System.out.println("pm1: " + pm1 + "pm2: " + pm2);
+        System.out.println("pm1: " + pm1 + "\tpm2: " + pm2);
         System.exit(0);
     }
 
@@ -91,7 +91,7 @@ class Pair {
 abstract class PairManager {
     AtomicInteger checkCounter = new AtomicInteger(0);
     protected Pair p = new Pair();
-    private List<Pair> storage = Collections.synchronizedList(new ArrayList<Pair>());
+    private List<Pair> storage = Collections.synchronizedList(new ArrayList<>());
 
     public synchronized Pair getPair() {
         return new Pair(p.getX(), p.getY());
@@ -133,11 +133,11 @@ class PairManager2 extends PairManager {
 }
 
 
-class PairMunipulator implements Runnable {
+class PairManipulator implements Runnable {
 
     private PairManager pm;
 
-    public PairMunipulator(PairManager pm) {
+    public PairManipulator(PairManager pm) {
         this.pm = pm;
     }
 
@@ -165,7 +165,11 @@ class PairCheck implements Runnable {
     public void run() {
         while (true) {
             pm.checkCounter.incrementAndGet();
-            pm.getPair().checkState();
+            try{
+                pm.getPair().checkState();
+            } catch (Pair.PairValuesNotEqualException e){
+                e.printStackTrace();
+            }
         }
     }
 }

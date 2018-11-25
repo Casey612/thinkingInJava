@@ -33,7 +33,22 @@ class ExplicitPairManager1 extends PairManager {
 }
 
 class ExplicitPairManager2 extends PairManager {
-    private Lock lock = new ReentrantLock();
+    private ReentrantLock lock = new ReentrantLock();
+
+    /**
+     * 需要修改get方法,synchronized锁住对象。
+     * 而不是lock,两者交叉使用，会有一些误解。
+     * @return
+     */
+    @Override
+    public Pair getPair() {
+        lock.lock();
+        try{
+            return super.getPair();
+        } finally {
+            lock.unlock();
+        }
+    }
 
     @Override
     public void increment() {
