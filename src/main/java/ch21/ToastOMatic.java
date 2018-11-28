@@ -28,7 +28,7 @@ public class ToastOMatic {
 }
 
 class Toast {
-    public enum Status {DRY, BUTTERED, JAMMED}
+    public enum Status {DRY, BUTTERED, JAMMED, PeanutButtered, Jellyed}
 
     private Status status = Status.DRY;
     private final int id;
@@ -43,6 +43,14 @@ class Toast {
 
     public void jam() {
         this.status = Status.JAMMED;
+    }
+
+    public void peanutButter() {
+        this.status = Status.PeanutButtered;
+    }
+
+    public void jelly() {
+        this.status = Status.Jellyed;
     }
 
     public Status getStatus() {
