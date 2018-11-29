@@ -8,9 +8,9 @@ public class GreenHouseControls extends Controller {
 
     private boolean light = false;
 
-    public class LinghtOn extends Event{
+    public class LightOn extends Event{
 
-        protected LinghtOn(long delayTime) {
+        protected LightOn(long delayTime) {
             super(delayTime);
         }
 
@@ -25,9 +25,9 @@ public class GreenHouseControls extends Controller {
         }
     }
 
-    public class LinghtOff extends Event{
+    public class LightOff extends Event{
 
-        protected LinghtOff(long delayTime) {
+        protected LightOff(long delayTime) {
             super(delayTime);
         }
 
